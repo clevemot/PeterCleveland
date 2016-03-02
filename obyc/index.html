@@ -1,0 +1,181 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Ocean Beach</title>
+  <meta name="description" content="oceanbeach App">
+  <meta name="viewport" content="width=device-width">
+
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+
+  <!-- Custom styles for this template -->
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="css/signin.css" rel="stylesheet">
+   <link href="css/metisMenu.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="css/timeline.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="css/morris.css" rel="stylesheet">
+
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+  <script src="js/oceanbeach.js"></script>
+
+
+   <!-- jQuery -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/metisMenu.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/admin.js"></script>
+   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body>
+
+
+    <!-- forum Interface -->
+
+    <div id="oceanbeachapp">
+
+      <div class="content"></div>
+    </div>
+
+
+    <!-- Templates -->
+
+    <script type="text/template" id="login-template">
+
+      <div class = "login">
+        <h1  id="logofont" style="text-align:center">Ocean Beach</h1>
+        <form class="form-signin">
+           <div class="error" style="display:none"></div>
+          <h3 class="form-signin-heading">Sign in</h3>
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="text" id="inputEmail" class="form-control input-email" placeholder="Email address" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control input-password" placeholder="Password" required>
+
+          <div>
+              <a class="signup-link">Sign up?</a>
+          </div>
+
+          <br>
+          <button class="btn btn-lg btn-primary btn-block">Sign in</button>
+        </form>
+
+      </div>
+
+    </script>
+
+
+    <script type="text/template" id="signup-template">
+
+      <div class = "signup">
+        <h1  id="logofont" style="text-align:center">Ocean Beach</h1>
+        <form class="form-signup">
+           <div class="error" style="display:none"></div>
+          <h3 class="form-signin-heading">Sign up</h3>
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="text" id="inputEmail" class="form-control input-email" placeholder="Email address" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control input-password" placeholder="Password" required>
+
+          <div>
+              <a  class="signin-link">Sign in?</a>
+          </div>
+
+          <br>
+          <button class="btn btn-lg btn-primary btn-block">Sign up</button>
+        </form>
+
+      </div>
+
+    </script>
+
+
+
+
+
+    <script type="text/template" id="user-template">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" id="logofont">Ocean Beach</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <%= Parse.User.current().escape("username") %>  <i class="fa fa-angle-down fa-lg"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li><a href="my-account.html"></i>My Account</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a class="log-out">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+
+
+
+
+
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" class="page-content">
+
+
+              Welcome, <%= Parse.User.current().escape("username") %>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
