@@ -398,3 +398,7 @@ table.dataTable thead .sorting:after {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    
+}
